@@ -132,9 +132,9 @@ We implemented three key algorithms and compared them against a Brute Force base
     - **HNSW**: Logarithmic scaling $O(\log N)$ makes it vastly superior for very large datasets ($N > 1M$), even if Python overhead masks this at $N=10k$.
 
 2.  **Index Build Time**
-    - **LSH**: Fastest construction ($O(N)$), just hashing.
-    - **IVF**: Moderate construction ($O(N \cdot K)$), dominated by K-Means clustering.
-    - **HNSW**: Slowest construction ($O(N \cdot \log N)$), requires inserting vectors one-by-one into the graph.
+    - **LSH**: Fastest construction (O(N)), just hashing.
+    - **IVF**: Moderate construction (O(N.K), dominated by K-Means clustering.
+    - **HNSW**: Slowest construction (O(Nlog N), requires inserting vectors one-by-one into the graph.
 
 3.  **Memory Usage**
     - **LSH**: High memory for Multi-table (requires $L$ tables).
